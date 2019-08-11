@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="A网,A网导航,个性化自定义导航网站">
+    <meta name="Description" content="A网-个性化自定义导航站 - 全能搜索 | 搜索聚合 | 综合搜索 | 超强搜索| 聚合导航">
+    <title>A网</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1210938_6v4kkt5v6ms.css">
+
+<!--    <link rel="stylesheet" href="static/css/star.css">-->
+    <link rel="icon" href="./static/image/logo/logo.ico" type="image/x-icon">
+    <style>
+      body
+        html{
+        overflow-x: hidden;
+        margin-top:0px;
+        padding-top: 0px;
+
+
+        /*overflow-y: visible;*/
+        }
+      body{
+        background-color: rgba(32,32,32,1);
+        font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+        overflow-x: hidden;
+        margin-top:0px;
+        padding-top: 0px;
+
+        /*overflow-y: visible;*/
+      }
+      *{
+        font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+      }
+        /*body滚动条样式*/
+        html::-webkit-scrollbar {
+
+          width:5px;
+
+          height:5px;
+
+        }
+        html::-webkit-scrollbar-button    {
+          height: 5px;
+          background-color:rgba(239,6,66,0.1);
+
+        }
+
+       html::-webkit-scrollbar-track     {
+
+          background:rgba(0,0,0,1);
+
+
+        }
+
+       html::-webkit-scrollbar-track-piece {
+          background:rgba(0,0,0,1);
+
+
+        }
+
+        html::-webkit-scrollbar-thumb{
+
+          background:rgba(239,6,66,0.5);
+          border-radius:4px;
+
+
+        }
+
+        html::-webkit-scrollbar-corner {
+
+          background:white;
+
+
+        }
+
+        html::-webkit-scrollbar-resizer  {
+
+          background:white;
+
+
+        }
+        /*body滚动条样式*/
+        body::-webkit-scrollbar {
+
+          width:5px;
+
+          height:5px;
+
+        }
+        body::-webkit-scrollbar-button    {
+          height: 5px;
+          background:rgba(239,6,66,0.5);
+
+        }
+
+        body::-webkit-scrollbar-track     {
+
+          background:rgba(0,0,0,0.8);
+
+
+        }
+
+        body::-webkit-scrollbar-track-piece {
+          background:rgba(0,0,0,0.1);
+
+
+        }
+
+        body::-webkit-scrollbar-thumb{
+
+          background:rgba(239,6,66,0.5);
+          border-radius:4px;
+
+
+        }
+
+        body::-webkit-scrollbar-corner {
+
+          background:white;
+
+
+        }
+
+        body::-webkit-scrollbar-resizer  {
+
+          background:white;
+
+
+        }
+
+
+
+
+
+    </style>
+    <title>anet</title>
+    <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/rainyday.js"></script>
+  </head>
+  <body>
+
+<!--  <div class="snow-container" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;"></div>-->
+
+<!--<div id="background" class="wall"></div>-->
+
+
+  <h1 style="position: absolute;left:-1000px;opacity: 0;">A网</h1>
+  <h2 style="position: absolute;left:-1000px;opacity: 0;">A网导航</h2>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+<div style="opacity: 0;position: fixed;bottom:0"> <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277764596'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1277764596%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script> <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277728410'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1277728410%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+
+<!--<div style="position: fixed;width: 100%;height: 10px;bottom: 0;background: inherit;"></div>-->
+
+
+  </body>
+  <script>
+
+   query();
+
+
+
+      function query(){
+        var input=document.getElementById("wd");
+        var value='';
+        ['keyup','paste','cut','copy','focus'].forEach(function(item,index){
+          input.addEventListener(item, function () {
+            value=document.getElementById("dataFrominput").value;
+            if(item=='cut'){
+              // console.log("剪切"+value);
+              setTimeout(function () {
+                value=document.getElementById("dataFrominput").value;
+                if(value!=''){
+                  associate(value);
+                }
+              },500)
+            }else if(value!=''){
+               // console.log(value);
+               associate(value);
+
+            }else{
+
+            }
+          });
+        });
+    }
+
+
+    function associate(value) {
+
+      var oScript = document.createElement('script');
+      oScript.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + value + '&cb=soso';
+      document.body.appendChild(oScript);
+      document.body.removeChild(oScript);
+    }
+
+    function soso(date) {
+      var key = date.s;
+      // console.log(key);
+      document.getElementById("dataFromBd").value=key;
+    }
+  </script>
+</html>

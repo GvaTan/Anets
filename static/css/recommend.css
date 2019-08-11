@@ -1,0 +1,67 @@
+
+
+.recommen .right ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.recommen .right ul li{
+  font-size: 14px;
+  width: 134px;
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+  /*float: left;*/
+  /*background-color: red;*/
+
+  padding-left: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+  opacity:1;
+  transition: all 0.5s;
+}
+
+
+.recommen .right ul li a{
+  font-size: 14px;
+  display: block;
+  color:#777;
+  text-decoration: none;
+}
+
+.recommen .right ul li:hover{
+  background-color: rgba(0,0,0,0.02);
+  opacity: 1;
+}
+.recommen .right ul li:hover a{
+  text-decoration: none;
+  color:rgba(244,90,141,1);
+}
+.recommen .right ul li a span{
+  margin-left: 20px;
+}
+.recommen .right ul li img{
+  opacity:0;
+
+}
+.recommen .right ul:hover li img{
+  opacity: 1;
+}
+.recommen .right ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: default;
+}
+.icon-zhuti{
+  position: absolute;
+  margin-left: 110px;
+  margin-top: -38px;
+  cursor: default;
+  opacity: 0;
+  transition: all 0s;
+}
+
+.recommen .right ul:hover li:hover .icon-zhuti{
+  opacity: 1;
+}
